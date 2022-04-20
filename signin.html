@@ -1,0 +1,76 @@
+<html lang="en">
+<head>
+    <title>Create your Google Account</title>
+    <link rel="stylesheet" href="signin.css">
+</head>
+<body>
+    <div class="kn">
+  <p class="vv" style="color: dodgerblue;">G</p><p class="vv" style="color: rgb(255, 30, 30);">o</p><p class="vv" style="color: rgb(255, 214, 30);">o</p><p class="vv" style="color: dodgerblue;">g</p><p class="vv" style="color: rgb(4, 136, 44);">l</p><p class="vv" style="color: rgb(255, 0, 0);">e</p>
+ <br><br><br><br><br>
+<h2>Create your Google Account</h2>
+<div class="ss">
+        <form action="">
+
+        <input id="a1" type="text" placeholder="First name"/><br><span id="error"></span><br>
+        
+        <input id="a2" type="text" placeholder="Last name"/><br><span id="error"></span><br><br>
+        <input id="a3" type="text" placeholder="Username"/><br><span id="error"></span><br><br>
+        <input id="a4" type="password" placeholder="Password"/><br><span id="error"></span><br><br>
+        <input id="a5" type="password" placeholder="Confirm"/><br><span id="error"></span><br><br>
+        <input id="hh" type="button" value="Next" onclick="kn()">
+        </form>
+</div>
+<div class="ss" >
+    <img src="account.svg" width="200">
+</div>
+    </div>
+<script>   
+    function kn()
+     {
+    var fn,ln,un,psw,con;
+        fn=document.getElementById("a1").value;
+        ln=document.getElementById("a2").value;
+        un=document.getElementById("a3").value;
+        psw=document.getElementById("a4").value;
+        con=document.getElementById("a5").value;
+        var error = document.getElementById("error");
+       d=/[a-zA-Z][a-zA-Z]{5,20}/;
+       s=/[a-zA-Z][a-zA-Z0-9]*@gmail.com/;
+       h=/[a-zA-Z0-9]{8,20}/;
+       if(fn.match(d)==null)
+       {
+        error.textContent = "firstname not valid";
+        error.style.color = "red";
+       }      
+      
+        if(ln.match(d)==null)
+        {
+            error.textContent = "secondname not valid";
+        error.style.color = "red";
+        }
+       
+       if(un.match(s)==null)
+       {
+        error.textContent = "username not valid";
+        error.style.color = "red";
+       }
+      
+        if(psw.match(h)==null)
+        {
+            error.textContent = "passwordname not valid";
+        error.style.color = "red";
+      }
+      if(psw!=con)
+      {
+        error.textContent = "enter the same password";
+        error.style.color = "red";
+      }
+      if((fn.match(d)!=null)&&(ln.match(d)!=null)&&(un.match(s)!=null)&&(psw.match(h)!=null)&&(psw==con))
+       {
+           document.writeln("verified successfully")
+       }
+
+    }
+</script>    
+</body>
+</html>

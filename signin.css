@@ -1,0 +1,31 @@
+.vv{
+    float:left;
+    font-size: 35px;
+}
+.kn{
+   
+    margin: auto;
+    margin-top: 100px;
+    width: 50%;
+    border: 3px solid rgb(87, 86, 86);
+    border-radius: 10px;
+    padding: 10px;
+}
+input{
+    margin: 10px;
+    padding: 8px;
+    border-radius: 3px;
+}
+#hh{
+    padding-left: 20px;
+    padding-right: 20px;
+    color: aliceblue;
+    background:rgb(10, 121, 224);
+    font-size: 16pxpx;  
+}
+.alert {
+    padding: 20px;
+    background-color: #f44336;
+    color: white;
+    margin-bottom: 15px;
+  }
